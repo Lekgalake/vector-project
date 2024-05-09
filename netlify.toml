@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/vectoralgebra.html"
+status = 200
