@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 main {
-    height:100vh;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,12 +27,13 @@ main {
 }
 .calculation-button {
     display: inline-block;
-    border: none;
+    background-color: #ffff;
     padding: 10px ;
     text-align: center;
     background: transparent;
-    font-size: 17px;
+    font-size: 16px;
     color: #ffff;
+    marging
 }
 .calculations-div {
     padding: 10px 0px 0 0px;
@@ -75,7 +76,18 @@ button {
     
 }
 #magnitudeA {
-    padding:0;
-    width:50%;
     display: inline-block;
+    margin-left: 10px;
+}
+#output-A {
+    display: inline-block;
+    flex-shrink: 0;
+}
+.calculations-buttons {
+    background: transparent;
+    color: #ffff;
+    padding: 10px;
+    margin-inline: 4px;
+    border-radius: 8px;
+    border: 1px solid #ffff;
 }

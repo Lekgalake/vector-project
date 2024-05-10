@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 
 </head>
+
 <body>
 
     <main>
@@ -14,40 +16,49 @@
             <div class="input-group">
                 <h2 class="title">Enter first vector components: <b>(A)</b></h2>
                 <div class="seperator">
-                <label for="x1">Enter i:</label>
-                <input type="number" id="x1" placeholder="Enter i"><br>
-                <label for="y1">Enter j:</label>
-                <input type="number" id="y1" placeholder="Enter j"><br>
-                <label for="z1">Enter k:</label>
-                <input type="number" id="z1" placeholder="Enter k"><br>
-                <div class="calculations-div">
-                <button onclick="calculate('A')" class="calculation-button">The magnitude for vector A is:</button>
-                <input type="text" id="magnitudeA" name="magnitudeA" readonly>
+                    <label for="x1">Enter i:</label>
+                    <input type="number" id="x1" placeholder="Enter i"><br>
+                    <label for="y1">Enter j:</label>
+                    <input type="number" id="y1" placeholder="Enter j"><br>
+                    <label for="z1">Enter k:</label>
+                    <input type="number" id="z1" placeholder="Enter k"><br>
+                    <div class="calculations-div">
+                        <div class="button-container">
+                        <button class="calculation-button" onclick="calculate('A')">Calculate Magnitude A</button>
+                        <input type="text" id="magnitudeA" name="magnitudeA" readonly>
+                    </div>
+                    </div>
                 </div>
-            </div>
             </div>
             <div class="input-group input-group-2">
                 <h2 class="title">Enter second vector components: <b>(B)</b></h2>
                 <div class="seperator">
-                <label for="x2">Enter i:</label>
-                <input type="number" id="x2" placeholder="Enter i"><br>
-                <label for="y2">Enter j:</label>
-                <input type="number" id="y2" placeholder="Enter j"><br>
-                <label for="z2">Enter k:</label>
-                <input type="number" id="z2" placeholder="Enter k"><br>
-                <button class="calculation-button" onclick="calculate('B')">Calculate Magnitude B</button>
-        <input type="text" id="magnitudeB" name="magnitudeB" readonly>
+                    <label for="x2">Enter i:</label>
+                    <input type="number" id="x2" placeholder="Enter i"><br>
+                    <label for="y2">Enter j:</label>
+                    <input type="number" id="y2" placeholder="Enter j"><br>
+                    <label for="z2">Enter k:</label>
+                    <input type="number" id="z2" placeholder="Enter k"><br>
+                    <button class="calculation-button" onclick="calculate('B')">Calculate Magnitude B</button>
+                    <input type="text" id="magnitudeB" name="magnitudeB" readonly>
+                </div>
             </div>
+            <div class="btn-group">
+                <p id="result"></p>
+                <button class="calculations-buttons" onclick="calculate('dot')">Calculate Dot Product</button>
+                <button class="calculations-buttons" onclick="calculate('cross')">Calculate Cross Product</button>
+                <button class="calculations-buttons" onclick="calculate('angle')" title="your points must be valid to get the angle">Calculate Angle between A and B</button>
+                <button class="calculations-buttons" onclick="clearInputs()">Clear Inputs</button>
             </div>
-            
+    </div>
+    
+        </div>
+
+
+
         </div>
     </main>
-    
-    <script src="app.js">
-        
-    </script>
-    </div>
+    <script src="app.js"></script>
 </body>
-</html>
-   
 
+</html>
