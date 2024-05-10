@@ -12,6 +12,7 @@ main {
     align-items: center;
     font-family: "Poppins", sans-serif;
     color: #ffff;
+    flex-wrap: wrap;
 }
 .box-container {
     background: linear-gradient(to right,#087b64c5,#316f99ab);
@@ -22,6 +23,7 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
 }
 .calculation-button {
     display: inline-block;
@@ -71,4 +73,9 @@ button {
 .calculate-inputs {
     padding: 0;
     
+}
+#magnitudeA {
+    padding:0;
+    width:50%;
+    display: inline-block;
 }
