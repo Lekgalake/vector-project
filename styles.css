@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 main {
-    
+    background: linear-gradient(to right,#087b64c5,#316f99ab);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +39,6 @@ main {
     padding: 10px 0px 0 0px;
     display: flex;
     flex-direction: column;
-
 }
 .title {
     color: #ffff;
@@ -90,4 +89,7 @@ button {
     margin-inline: 4px;
     border-radius: 8px;
     border: 1px solid #ffff;
+}
+#result {
+    padding:10px;
 }
