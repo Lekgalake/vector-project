@@ -6,12 +6,13 @@
     box-sizing: border-box;
 }
 main {
-    height:100vh;
+    background: linear-gradient(to right,#087b64c5,#316f99ab);
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Poppins", sans-serif;
     color: #ffff;
+    flex-wrap: wrap;
 }
 .box-container {
     background: linear-gradient(to right,#087b64c5,#316f99ab);
@@ -22,21 +23,22 @@ main {
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-wrap:wrap;
 }
 .calculation-button {
     display: inline-block;
-    border: none;
+    background-color: #ffff;
     padding: 10px ;
     text-align: center;
     background: transparent;
-    font-size: 17px;
+    font-size: 16px;
     color: #ffff;
+    marging
 }
 .calculations-div {
     padding: 10px 0px 0 0px;
     display: flex;
     flex-direction: column;
-
 }
 .title {
     color: #ffff;
@@ -71,4 +73,23 @@ button {
 .calculate-inputs {
     padding: 0;
     
+}
+#magnitudeA {
+    display: inline-block;
+    margin-left: 10px;
+}
+#output-A {
+    display: inline-block;
+    flex-shrink: 0;
+}
+.calculations-buttons {
+    background: transparent;
+    color: #ffff;
+    padding: 10px;
+    margin-inline: 4px;
+    border-radius: 8px;
+    border: 1px solid #ffff;
+}
+#result {
+    padding:10px;
 }
