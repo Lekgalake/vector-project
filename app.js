@@ -63,23 +63,27 @@ function clearInputs() {
     document.getElementById("magnitudeB").value = "";
     document.getElementById("result").innerText = "";
 }
-function submitForm(event) {
-event.preventDefault();
 
-// Get form data
-let formData = new FormData(document.getElementById('feedbackForm'));
-let feedbackData = {};
-formData.forEach((value, key) => {
-    feedbackData[key] = value;
-});
+function calculateUnitVector() {
+    // Get user inputs
+    var unit_i = parseFloat(document.getElementById("unit_i").value);
+    var unit_j = parseFloat(document.getElementById("unit_j").value);
+    var unit_k = parseFloat(document.getElementById("unit_k").value);
 
-// Example: Display feedback data (you can replace this with your submission logic)
-document.getElementById('status').innerHTML = `
-    <p><strong>Name:</strong> ${feedbackData.name}</p>
-    <p><strong>Email:</strong> ${feedbackData.email}</p>
-    <p><strong>Message:</strong> ${feedbackData.message}</p>
-    <p>Feedback submitted successfully!</p>
-`;
+    // Calculate magnitude
+    var magnitude = Math.sqrt(unit_i * unit_i + unit_j * unit_j + unit_k * unit_k);
 
-// Reset form
-document.getElementById('feedbackForm').reset();}
+    // Calculate unit vector components
+    var unit_vector_i = (unit_i / magnitude).toFixed(3);
+    var unit_vector_j = (unit_j / magnitude).toFixed(3);
+    var unit_vector_k = (unit_k / magnitude).toFixed(3);
+
+    // Display the result
+    document.getElementById("answer").innerHTML = "The unit vector is: " + unit_vector_i + "i + " + unit_vector_j + "j + " + unit_vector_k + "k";
+}
+
+function clearInput_for_unit_vector() {
+    document.getElementById("unit_i").value = "";
+    document.getElementById("unit_j").value = "";
+    document.getElementById("unit_k").value = "";
+}
