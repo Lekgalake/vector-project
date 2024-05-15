@@ -79,7 +79,7 @@ function calculateUnitVector() {
     var unit_vector_k = (unit_k / magnitude).toFixed(3);
 
     // Display the result
-    document.getElementById("answer").innerHTML = "The unit vector is: " + unit_vector_i + "i + " + unit_vector_j + "j + " + unit_vector_k + "k";
+    document.getElementById("answer").innerHTML = "The unit vector is: " + unit_vector_i + "i  + " + unit_vector_j + " j  + " + unit_vector_k + "k";
 }
 
 function clearInput_for_unit_vector() {
@@ -87,3 +87,37 @@ function clearInput_for_unit_vector() {
     document.getElementById("unit_j").value = "";
     document.getElementById("unit_k").value = "";
 }
+
+
+
+// for the header 
+
+   // Dark Mode Button 
+
+   document.getElementById("darkModeBtn").addEventListener("click", function() { 
+
+    document.body.classList.add("dark-mode"); 
+    
+    }); 
+    
+     
+    
+    // Light Mode Button 
+    
+    document.getElementById("lightModeBtn").addEventListener("click", function() { 
+    
+     document.body.classList.remove("dark-mode"); 
+    
+    }); 
+    
+     
+    
+    // Font Size Select 
+    
+    document.getElementById("fontSizeSelect").addEventListener("change", function() { 
+    
+    var fontSize = this.value; 
+    
+     document.body.style.fontSize = fontSize; 
+    
+    }); 

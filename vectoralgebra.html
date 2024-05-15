@@ -6,71 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vector Calculator</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image.png" href="vector algebra picture.png">
     <link rel="icon" type="image.jpg" href="icon.jpg">
 </head>
 
 <body>
-        <header >
-            <ul class="header">
-                <li><a href="developers.html"><B>INFO</B></a></li>
-            </ul>
-        </header>
-    <main>
-        <div class="box-container">
-            <div class="input-group">
-                <h2 class="title">Enter first vector components: <b>(A)</b></h2>
-                <div class="seperator">
-                    <label for="x1">Enter i:</label>
-                    <input type="number" id="x1" placeholder="Enter i"><br>
-                    <label for="y1">Enter j:</label>
-                    <input type="number" id="y1" placeholder="Enter j"><br>
-                    <label for="z1">Enter k:</label>
-                    <input type="number" id="z1" placeholder="Enter k"><br>
-                    <div class="calculations-div">
-                        <div class="button-container">
-                        <button class="calculation-button" onclick="calculate('A')">Calculate Magnitude A</button>
-                        <input type="text" id="magnitudeA" name="magnitudeA" readonly>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="input-group input-group-2">
-                <h2 class="title">Enter second vector components: <b>(B)</b></h2>
-                <div class="seperator">
-                    <label for="x2">Enter i:</label>
-                    <input type="number" id="x2" placeholder="Enter i"><br>
-                    <label for="y2">Enter j:</label>
-                    <input type="number" id="y2" placeholder="Enter j"><br>
-                    <label for="z2">Enter k:</label>
-                    <input type="number" id="z2" placeholder="Enter k"><br>
-                    <button class="calculation-button" onclick="calculate('B')">Calculate Magnitude B</button>
-                    <input type="text" id="magnitudeB" name="magnitudeB" readonly>
-                </div>
-            </div>
-            <div class="btn-group">
-                <p id="result"></p>
-                <button class="calculations-buttons" onclick="calculate('dot')">Calculate Dot Product</button>
-                <button class="calculations-buttons" onclick="calculate('cross')">Calculate Cross Product</button>
-                <button class="calculations-buttons" onclick="calculate('angle')" title="your points must be valid to get the angle">Calculate Angle between A and B</button>
-                <button class="calculations-buttons" onclick="clearInputs()">Clear Inputs</button>
-            </div>
-            <div  >
-                <h2> Calculate Unit Vector.</h2>
-        
-              <label for="unit_i" >Enter i:</label>
-             <input type="number" id="unit_i" placeholder="Enter i"><br><br>
-             <label for="unit_j">Enter j:</label>
-             <input type="number" id="unit_j" placeholder="Enter j"><br><br>
-             <label for="unit_k">Enter k:</label>
-             <input type="number" id="unit_k" placeholder="Enter k"><br><br>
-             <button onclick="calculateUnitVector()">Calculate unit vector </button>
-             <button onclick="clearInput_for_unit_vector()">clear Inputs</button>
-            <p id="answer"></p>
-             </div>
-    </div>
 
+         <header> 
+         <div class="container"> 
+        
+          <h1>Welcome to My Page</h1> 
+
+            <div class="settings"> 
+                  <button id="darkModeBtn">Dark Mode</button> 
+        
+                       <button id="lightModeBtn">Light Mode</button> 
+                       <button><a href="profile.html" style="color: black; text-decoration: none;">contact</a></button> 
+                     <label for="fontSizeSelect">Font Size:</label> 
+                   
+              <select id="fontSizeSelect"> 
+
+
+                     <option value="14px">Small</option> 
+                     <option value="16px" selected>Medium</option> 
+        
+                      <option value="18px">Large</option> 
+                 
+        
+              </select> 
+        
+              
+        
+           </div> 
+        
+        </div> 
+        
+        </header> 
+    <main>
+        <h1 style="text-align: center;">vector Calculator</h1>
+        <div class="container">
+            <div class="vector-input">
+                <h1>vector components: <b>(A)</b></h1>
+                <div class="input-group">
+                    <label for="x1">Enter i:</label>
+                    <input type="number" id="x1" placeholder="Enter i"  style="width: 500px;"><br>
+                    <label for="y1">Enter j:</label>
+                    <input type="number" id="y1" placeholder="Enter j" style="width: 500px;"><br>
+                    <label for="z1">Enter k:</label>
+                    <input type="number" id="z1" placeholder="Enter k" style="width: 500px;"><br>
+                    <div class="button-group">
+                        <button onclick="calculate('A')">Calculate Magnitude A</button>
+                        <input type="text" id="magnitudeA" name="magnitudeA" readonly style="width: 285px;">
+                    </div>
+                </div>
+            </div>
+            <div class="vector-input">
+                <h1>vector components: <b>(B)</b></h1>
+                <div class="input-group">
+                    <label for="x2">Enter i:</label>
+                    <input type="number" id="x2" placeholder="Enter i" style="width: 500px;"><br><br>
+                    <label for="y2">Enter j:</label>
+                    <input type="number" id="y2" placeholder="Enter j" style="width: 500px;"><br><br>
+                    <label for="z2">Enter k:</label>
+                    <input type="number" id="z2" placeholder="Enter k" style="width: 500px;"><br><br>
+                    <div class="button-group">
+                        <button onclick="calculate('B')">Calculate Magnitude B</button>
+                        <input type="text" id="magnitudeB" name="magnitudeB" readonly  style="width: 285px;">
+                    </div>
+                </div>
+            </div>
+            <div class="button-group">
+              
+                <button   onclick="calculate('dot')">Calculate Dot Product</button>
+                <button   onclick="calculate('cross')">Calculate Cross Product</button>
+                <button onclick="calculate('angle')" title="your points must be valid to get the angle">Calculate Angle between A and B</button>
+                <button onclick="clearInputs()">Clear Inputs</button>
+                <p id="result"></p>
+            </div>
+            <div class="unit-vector-input">
+                <h1>Calculate Unit Vector</h1>
+                <div class="input-group">
+                    <label for="unit_i">Enter i:</label>
+                    <input type="number" id="unit_i" placeholder="Enter i" style="width: 500px;"><br><br>
+                    <label for="unit_j">Enter j:</label>
+                    <input type="number" id="unit_j" placeholder="Enter j" style="width: 500px;"><br><br>
+                    <label for="unit_k">Enter k:</label>
+                    <input type="number" id="unit_k" placeholder="Enter k" style="width: 500px;"><br><br>
+                    <div class="button-group">
+                        <button onclick="calculateUnitVector()">Calculate Unit Vector</button>
+                        <button onclick="clearInput_for_unit_vector()">Clear Inputs</button>
+                    </div>
+                    <div class="result-box">
+                        <p id="answer"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
     </main>
+
+    <footer>
+        <p>If you want to learn more about vectors, visit this website: <a href="https://tutorial.math.lamar.edu/Classes/CalcII/Vectors_Basics.aspx" target="_blank">click here</a></p>
+    </footer>
+    
     <script src="app.js"></script>
 </body>
 

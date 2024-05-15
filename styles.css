@@ -1,101 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* styles.css */
 
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.vector-input, .unit-vector-input {
+    margin-bottom: 20px;
+}
+
+.vector-input h2, .unit-vector-input h2 {
+    font-size: 18px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     box-sizing: border-box;
 }
-main {
-    background: linear-gradient(to right,#087b64c5,#316f99ab);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins", sans-serif;
-    color: #ffff;
-    flex-wrap: wrap;
-}
-.box-container {
-    background: linear-gradient(to right,#087b64c5,#316f99ab);
-    padding:2rem;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:wrap;
-}
-.calculation-button {
-    display: inline-block;
-    background-color: #ffff;
-    padding: 10px ;
-    text-align: center;
-    background: transparent;
+
+.button-group button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    color: #ffff;
-    marging
-}
-.calculations-div {
-    padding: 10px 0px 0 0px;
-    display: flex;
-    flex-direction: column;
-}
-.title {
-    color: #ffff;
-}
-.input-group {
-    padding:0px 15px;
 }
 
-
-input {
-    background: transparent;
-    border: 1px solid #ffff;
-    border-radius: 8px;
-    font-family: "Poppins", sans-serif;
-    color: #ffff;
-    margin: 10px 0 0 0;
+.button-group button:hover {
+    background-color: #0056b3;
 }
 
-input, label {
-    margin-bottom: 20px;
-    margin-right:50px;
-    padding:10px;
+#answer {
+    margin-top: 10px;
+    font-weight: bold;
 }
-button {
-    background-color: #ffff;
-    text-align: left;
+
+.dark-mode { 
+
+    background-color: #333; /* Change background color to dark mode */ 
     
-}
-.seperator {
-    padding:20px;
-}
-.calculate-inputs {
-    padding: 0;
+     color: #fff; 
     
-}
-#magnitudeA {
-    display: inline-block;
-    margin-left: 10px;
-}
-#output-A {
-    display: inline-block;
-    flex-shrink: 0;
-}
-.calculations-buttons {
-    background: transparent;
-    color: #ffff;
-    padding: 10px;
-    margin-inline: 4px;
-    border-radius: 8px;
-    border: 1px solid #ffff;
-}
-#result {
-    padding:10px;
-}
-.header {
-    background-color: cyan;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-}
+    } 
+
+    .container { 
+
+        max-width: 960px; 
+        
+         margin: 0 auto; 
+        
+        padding: 0 20px; 
+        
+        } 
+        
+         
+        
+        header { 
+        
+        background-color: #007bff; 
+        
+        color: #fff; 
+        
+        padding: 20px 0; 
+        
+        } 
+        
+         
+        
+        header h1 { 
+        
+        margin: 0; 
+        
+        } 
+        
+         
+        
+        .settings { 
+        
+        margin-top: 10px; 
+        
+        } 
+        
+         
+        
+        .settings button,  
+        
+        .settings select { 
+        
+         margin-right: 10px; 
+        
+        padding: 8px 12px; 
+        
+        border: none; 
+        
+        border-radius: 5px; 
+        
+        cursor: pointer; 
+        
+        font-size: 16px; 
+        
+        } 
+        
+         
+        
+        .settings button:hover { 
+        
+        background-color: #0056b3; 
+        
+        } 
+        
+         
+        
+        main { 
+        
+         padding: 20px 0; 
+        
+        }
+
+        .result-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333; /* Background color */
+            color: #fff; /* Text color */
+            padding: 20px; /* Padding around the content */
+            text-align: center; /* Center-align the text */
+        }
+        
+        footer p {
+            margin: 0; /* Remove default margin for <p> */
+        }
+        
+        footer a {
+            color: #fff; /* Link color */
+            text-decoration: underline; /* Underline the link */
+        }
+        
+        footer a:hover {
+            color: #ffd700; /* Change link color on hover */
+        }
+        
+      

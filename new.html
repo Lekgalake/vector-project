@@ -1,0 +1,104 @@
+
+<html lang="en"> 
+
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ <title>Customizable Page</title> 
+
+ <style>
+    body { 
+
+font-family: Arial, sans-serif; 
+
+ margin: 0; 
+
+ padding: 0; 
+
+background-color: #f0f0f0; 
+
+color: #333; 
+
+} 
+
+ 
+
+
+
+ 
+
+ 
+ </style>
+</head> 
+
+<body> 
+
+<header> 
+<div class="container"> 
+
+<h1>Welcome to My Page</h1> 
+<div class="settings"> 
+<button id="darkModeBtn">Dark Mode</button> 
+
+<button id="lightModeBtn">Light Mode</button> 
+<label for="fontSizeSelect">Font Size:</label> 
+
+<select id="fontSizeSelect"> 
+  <option value="14px">Small</option> 
+ <option value="16px" selected>Medium</option> 
+
+ <option value="18px">Large</option> 
+
+ </select> 
+
+ <button><a href="developers.html">contact</a></button> 
+
+ </div> 
+
+</div> 
+
+</header> 
+
+ 
+
+ <main> 
+
+
+ </main> 
+
+ 
+<script>
+    // Dark Mode Button 
+
+document.getElementById("darkModeBtn").addEventListener("click", function() { 
+
+document.body.classList.add("dark-mode"); 
+
+}); 
+
+ 
+
+// Light Mode Button 
+
+document.getElementById("lightModeBtn").addEventListener("click", function() { 
+
+ document.body.classList.remove("dark-mode"); 
+
+}); 
+
+ 
+
+// Font Size Select 
+
+document.getElementById("fontSizeSelect").addEventListener("change", function() { 
+
+var fontSize = this.value; 
+
+ document.body.style.fontSize = fontSize; 
+
+}); 
+</script> 
+
+</body> 
+
+</html> 
