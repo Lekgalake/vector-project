@@ -5,38 +5,35 @@ function calculate(operation) {
     let x2 = document.getElementById("x2").value;
     let y2 = document.getElementById("y2").value;
     let z2 = document.getElementById("z2").value;
-    let errorMessage = "";
 
     switch (operation) {
         case 'A':
             if (isNaN(x1) || isNaN(y1) || isNaN(z1) || x1 === "" || y1 === "" || z1 === "") {
-                errorMessage = "Please enter valid numbers for vector A components.";
-                document.getElementById("error").innerText = errorMessage;
+                document.getElementById("errorA").innerText = "Please enter valid numbers for vector A components.";
                 return;
             }
             x1 = parseFloat(x1);
             y1 = parseFloat(y1);
             z1 = parseFloat(z1);
             document.getElementById("magnitudeA").value = calculateMagnitude(x1, y1, z1).toFixed(3);
-            document.getElementById("error").innerText = "";
+            document.getElementById("errorA").innerText = "";
             break;
         case 'B':
             if (isNaN(x2) || isNaN(y2) || isNaN(z2) || x2 === "" || y2 === "" || z2 === "") {
-                errorMessage = "Please enter valid numbers for vector B components.";
-                document.getElementById("error").innerText = errorMessage;
+                document.getElementById("errorB").innerText = "Please enter valid numbers for vector B components.";
                 return;
             }
             x2 = parseFloat(x2);
             y2 = parseFloat(y2);
             z2 = parseFloat(z2);
             document.getElementById("magnitudeB").value = calculateMagnitude(x2, y2, z2).toFixed(3);
-            document.getElementById("error").innerText = "";
+            document.getElementById("errorB").innerText = "";
             break;
         case 'dot':
             if (isNaN(x1) || isNaN(y1) || isNaN(z1) || x1 === "" || y1 === "" || z1 === "" ||
                 isNaN(x2) || isNaN(y2) || isNaN(z2) || x2 === "" || y2 === "" || z2 === "") {
-                errorMessage = "Please enter valid numbers for all vector components.";
-                document.getElementById("error").innerText = errorMessage;
+                document.getElementById("errorA").innerText = "Please enter valid numbers for vector A components.";
+                document.getElementById("errorB").innerText = "Please enter valid numbers for vector B components.";
                 return;
             }
             x1 = parseFloat(x1);
@@ -46,13 +43,14 @@ function calculate(operation) {
             y2 = parseFloat(y2);
             z2 = parseFloat(z2);
             document.getElementById("result").innerText = "Dot Product of A and B: " + calculateDotProduct(x1, y1, z1, x2, y2, z2).toFixed(3);
-            document.getElementById("error").innerText = "";
+            document.getElementById("errorA").innerText = "";
+            document.getElementById("errorB").innerText = "";
             break;
         case 'cross':
             if (isNaN(x1) || isNaN(y1) || isNaN(z1) || x1 === "" || y1 === "" || z1 === "" ||
                 isNaN(x2) || isNaN(y2) || isNaN(z2) || x2 === "" || y2 === "" || z2 === "") {
-                errorMessage = "Please enter valid numbers for all vector components.";
-                document.getElementById("error").innerText = errorMessage;
+                document.getElementById("errorA").innerText = "Please enter valid numbers for vector A components.";
+                document.getElementById("errorB").innerText = "Please enter valid numbers for vector B components.";
                 return;
             }
             x1 = parseFloat(x1);
@@ -62,13 +60,14 @@ function calculate(operation) {
             y2 = parseFloat(y2);
             z2 = parseFloat(z2);
             document.getElementById("result").innerText = "Cross Product of A and B: " + calculateCrossProduct(x1, y1, z1, x2, y2, z2);
-            document.getElementById("error").innerText = "";
+            document.getElementById("errorA").innerText = "";
+            document.getElementById("errorB").innerText = "";
             break;
         case 'angle':
             if (isNaN(x1) || isNaN(y1) || isNaN(z1) || x1 === "" || y1 === "" || z1 === "" ||
                 isNaN(x2) || isNaN(y2) || isNaN(z2) || x2 === "" || y2 === "" || z2 === "") {
-                errorMessage = "Please enter valid numbers for all vector components.";
-                document.getElementById("error").innerText = errorMessage;
+                document.getElementById("errorA").innerText = "Please enter valid numbers for vector A components.";
+                document.getElementById("errorB").innerText = "Please enter valid numbers for vector B components.";
                 return;
             }
             x1 = parseFloat(x1);
@@ -78,7 +77,8 @@ function calculate(operation) {
             y2 = parseFloat(y2);
             z2 = parseFloat(z2);
             document.getElementById("result").innerText = "Angle between A and B: " + calculateAngle(x1, y1, z1, x2, y2, z2).toFixed(3) + " degrees";
-            document.getElementById("error").innerText = "";
+            document.getElementById("errorA").innerText = "";
+            document.getElementById("errorB").innerText = "";
             break;
         default:
             break;
@@ -120,7 +120,8 @@ function clearInputs() {
     document.getElementById("magnitudeA").value = "";
     document.getElementById("magnitudeB").value = "";
     document.getElementById("result").innerText = "";
-    document.getElementById("error").innerText = "";
+    document.getElementById("errorA").innerText = "";
+    document.getElementById("errorB").innerText = "";
 }
 
 function calculateUnitVector() {
@@ -129,7 +130,7 @@ function calculateUnitVector() {
     var unit_k = document.getElementById("unit_k").value;
 
     if (isNaN(unit_i) || isNaN(unit_j) || isNaN(unit_k) || unit_i === "" || unit_j === "" || unit_k === "") {
-        document.getElementById("error").innerText = "Please enter valid numbers for all vector components.";
+        document.getElementById("errorUnit").innerText = "Please enter valid numbers for unit vector components.";
         return;
     }
 
@@ -143,15 +144,17 @@ function calculateUnitVector() {
     var unit_vector_k = (unit_k / magnitude).toFixed(3);
 
     document.getElementById("answer").innerHTML = "The unit vector is: " + unit_vector_i + "i  + " + unit_vector_j + " j  + " + unit_vector_k + "k";
-    document.getElementById("error").innerText = "";
+    document.getElementById("errorUnit").innerText = "";
 }
 
 function clearInput_for_unit_vector() {
     document.getElementById("unit_i").value = "";
     document.getElementById("unit_j").value = "";
     document.getElementById("unit_k").value = "";
-    document.getElementById("error").innerText = "";
+    document.getElementById("errorUnit").innerText = "";
 }
+
+
 
 
 
